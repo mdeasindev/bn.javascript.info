@@ -1,15 +1,15 @@
-# Operators
+# অপারেটরস
 
-We know many operators from school. They are things like addition `+`, multiplication `*`, subtraction `-`, and so on.
+আমরা স্কুল থেকেই অনেক অপারেটর সম্বন্ধে জানি। তারা ঠিক অনেকটা যোগ `+`, গুন `*`, বিয়োগ `-`, ইত্যাদির মত।
 
-In this chapter, we'll concentrate on aspects of operators that are not covered by school arithmetic.
+এই অধ্যায়ে, আমরা অপারেটরের দিকে মনোযোগ দিব যা স্কুলের গনিতেও অন্তর্ভুক্ত ছিলনা।
 
-## Terms: "unary", "binary", "operand"
+## টার্মসঃ "ঊনারি", "বাইনারি", "অপারেন্ড"
 
-Before we move on, let's grasp some common terminology.
+আমরা সামনে যাবার আগে, চলুন আমরা কিছু সাধারন পরিভাষা বুঝি।
 
-- *An operand* -- is what operators are applied to. For instance, in the multiplication of `5 * 2` there are two operands: the left operand is `5` and the right operand is `2`. Sometimes, people call these "arguments" instead of "operands".
-- An operator is *unary* if it has a single operand. For example, the unary negation `-` reverses the sign of a number:
+- *একটি অপারেন্ড* -- হয় যা অপারেটরগুল দিয়ে প্রযুক্ত হয়। উদাহরণস্বরূপ, `5 * 2` এর গুনে, এখানে দুইটি অপারেন্ড আছেঃ বামের অপারেন্ডটি হল `5` এবং ডানের অপারেন্ডটি হল `2`. মাঝেমাঝে, লোকজন এইগুলোকে "অপারেন্ডস" এর পরিবর্তে "আরগুমেন্টস" বলে। 
+- যদি একটি অপারেন্ড থাকে তাহলে সেটি হল একটি *ইউনারি* অপারেটর। উদাহরণস্বরূপ, এই ইউনারি নেগেশনটি `-` সংখ্যার মানটি উল্টিয়ে দেয়ঃ
 
     ```js run
     let x = 1;
@@ -19,14 +19,14 @@ Before we move on, let's grasp some common terminology.
     */!*
     alert( x ); // -1, unary negation was applied
     ```
-- An operator is *binary* if it has two operands. The same minus exists in binary form as well:
+- যদি দুইটি অপারেন্ডস থাকে তাহলে সেটি হল একটি *বাইনারি* অপারেটর। বাইনারিতেও মাইনাস প্রতীকটি একই থাকবেঃ
 
     ```js run no-beautify
     let x = 1, y = 3;
     alert( y - x ); // 2, binary minus subtracts values
     ```
 
-    Formally, in the examples above we have two different operators that share the same symbol: the negation operator, a unary operator that reverses the sign, and the subtraction operator, a binary operator that subtracts one number from another.
+    নিয়মানুসারে, উপরের উদাহরনে আমাদের দুইটি ভিন্ন অপারেটরস আছে যা একই প্রতীক ব্যবহার করেঃ নেগেশন অপারেটরটি হল একটি ইউনারি অপারেটর যা প্রতীকটিকেই উল্টিয়ে দেয়, এবং বিয়োগ অপারেটরটি হল একটি বাইনারি অপারেটর যা একটি সংখ্যা থেকে আরেকটি সংখ্যাকে বিয়োগ করে।
 
 ## String concatenation, binary +
 
