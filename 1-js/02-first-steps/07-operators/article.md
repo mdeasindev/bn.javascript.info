@@ -28,40 +28,40 @@
 
     নিয়মানুসারে, উপরের উদাহরনে আমাদের দুইটি ভিন্ন অপারেটরস আছে যা একই প্রতীক ব্যবহার করেঃ নেগেশন অপারেটরটি হল একটি ইউনারি অপারেটর যা প্রতীকটিকেই উল্টিয়ে দেয়, এবং বিয়োগ অপারেটরটি হল একটি বাইনারি অপারেটর যা একটি সংখ্যা থেকে আরেকটি সংখ্যাকে বিয়োগ করে।
 
-## String concatenation, binary +
+## স্ট্রিং সংযোগ, বাইনারি যোগ ( + )
 
-Now, let's see special features of JavaScript operators that are beyond school arithmetics.
+এখন, চলুন দেখি জাভাস্ক্রিপ্ট এর বিশেষ বৈশিষ্ট্য যেটা স্কুলের গনিতেও ছিলনা।
 
-Usually, the plus operator `+` sums numbers.
+সাধারণত, যোগ অপারেটর `+` সংখ্যাকে যোগ করে।
 
-But, if the binary `+` is applied to strings, it merges (concatenates) them:
+কিন্তু যদি বাইনারি `+` স্ট্রিং এর মদ্ধে ব্যবহার করা হয় তাহলে এটা এদেরকে যুক্ত করে দিবেঃ 
 
 ```js
 let s = "my" + "string";
 alert(s); // mystring
 ```
 
-Note that if one of the operands is a string, the other one is converted to a string too.
+মনে রাখবেন যে, যদি অপারেন্ডগুলোর একটি যদি স্ট্রিং হয় তাহলে অপরটিকেও স্ট্রিং এ রূপান্তরিত করা হয়।
 
-For example:
+উদাহরণ স্বরূপঃ
 
 ```js run
 alert( '1' + 2 ); // "12"
 alert( 2 + '1' ); // "21"
 ```
 
-See, it doesn't matter whether the first operand is a string or the second one. The rule is simple: if either operand is a string, the other one is converted into a string as well.
+দেখেন, প্রথম অপারেন্ড অথবা দ্বিতীয় অপারেন্ড স্ট্রিং কিনা এটা কোন ব্যাপার না। সহজ নিয়নঃ যদি যেকোনো একটি অপারেন্ড স্ট্রিং হয় তাহলে অপরটিও স্ট্রিং এ রূপান্তরিত হয়।
 
-However, note that operations run from left to right. If there are two numbers followed by a string, the numbers will be added before being converted to a string:
+তবে, মনে রাখবেন যে অপারেশনগুলো চলে বাম থেকে ডান দিকে। যদি একটি স্ট্রিং এর আগে দুই এর অধিক সংখ্যা থাকে তাহলে স্ট্রিং এ রূপান্তরিত হওয়ার আগে সংখ্যাগুলোকে যোগ করা হবেঃ
 
 
 ```js run
 alert(2 + 2 + '1' ); // "41" and not "221"
 ```
 
-String concatenation and conversion is a special feature of the binary plus `+`. Other arithmetic operators work only with numbers and always convert their operands to numbers.
+ স্ট্রিং সংযোগ এবং রূপান্তর হল বাইনারি প্লাস `+` এর একটি বিশেষ বৈশিষ্ট্যঃ অনন্যা গনিত অপারেটরগুলো শুধুমাত্র সংখ্যার সাথেই কাজ করে এবং সর্বদা তাদের অপারেন্ডগুলোকে সংখ্যায় রুপান্তর করে।
 
-For instance, subtraction and division:
+উদাহরণ স্বরূপঃ, বিয়োগ এবং ভাগঃ
 
 ```js run
 alert( 2 - '1' ); // 1
