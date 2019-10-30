@@ -68,13 +68,13 @@ alert( 2 - '1' ); // 1
 alert( '6' / '2' ); // 3
 ```
 
-## Numeric conversion, unary +
+## সংখ্যা রূপান্তর, ইউনারি +
 
-The plus `+` exists in two forms: the binary form that we used above and the unary form.
+যোগ `+` দুই ধরনের হয়ে থাকে: বাইনারি যেটা আমরা উপরে ব্যবহার করেছি এবং ইউনারি।
 
-The unary plus or, in other words, the plus operator `+` applied to a single value, doesn't do anything to numbers. But if the operand is not a number, the unary plus converts it into a number.
+ইউনারি যোগ বা যোগ অপারেটরটি একক মানের উপর প্রযুক্ত হয়, এটা সংখ্যাকে কিছুই করে না কিন্তু অপারেন্ড যদি সংখ্যা না হয় তাহলে ইউনারি যোগ অপারেটরটি এটিকে সংখ্যায় রুপান্তরিত করে।
 
-For example:
+যেমনঃ
 
 ```js run
 // No effect on numbers
@@ -91,11 +91,11 @@ alert( +"" );   // 0
 */!*
 ```
 
-It actually does the same thing as `Number(...)`, but is shorter.
+এটা আসলে `Number(...)` ফাংশনের মত একই কাজ করে কিন্তু এটা সংক্ষিপ্ত।
 
-The need to convert strings to numbers arises very often. For example, if we are getting values from HTML form fields, they are usually strings. What if we want to sum them?
+সংখ্যায় স্ট্রিং রূপান্তর করার প্রয়োজনীয়তা অনেকবার দেখা যায়। যেমন,  যদি আমরা এইচটিএমএল এর ফর্ম থেকে যে মান পাই, সেগুলো সাধারনত স্ট্রিং হয়। কেমন হয় যদি আমরা এদেরকে যোগ করতে চাই?
 
-The binary plus would add them as strings:
+বাইনারি যোগ হয়তো স্ট্রিং হিসেবে এদেরকে সংযুক্ত করে দিতঃ
 
 ```js run
 let apples = "2";
@@ -104,7 +104,7 @@ let oranges = "3";
 alert( apples + oranges ); // "23", the binary plus concatenates strings
 ```
 
-If we want to treat them as numbers, we need to convert and then sum them:
+যদি আমরা এদেরকে সংখ্যা হিসেবে ব্যবহার করতে চাই, আমাদেরকে সংখ্যায় রূপান্তর করতে হবে অ্যান্ড তারপর যোগ করতে হবেঃ
 
 ```js run
 let apples = "2";
@@ -119,9 +119,9 @@ alert( +apples + +oranges ); // 5
 // alert( Number(apples) + Number(oranges) ); // 5
 ```
 
-From a mathematician's standpoint, the abundance of pluses may seem strange. But from a programmer's standpoint, there's nothing special: unary pluses are applied first, they convert strings to numbers, and then the binary plus sums them up.
+একজন গণিতবিদের দৃষ্টিকোণ থেকে, যোগের প্রাচুর্যতা কিছুটা অদ্ভুত বলে মনে হতে পারে। তবে একজন প্রোগ্রামারের দৃষ্টিকোণ থেকে, বিশেষ কিছু নেই: ইউনারি প্লাসগুলো প্রথমে চালিত হয়ে স্ট্রিংকে সংখ্যায় রূপান্তর করে এবং তারপর বাইনারি প্লাস এদেরকে যোগ করে দেয়।
 
-Why are unary pluses applied to values before the binary ones? As we're going to see, that's because of their *higher precedence*.
+কেন বাইনারির আগে ইউনারি প্লাসগুলো মানে চালিত হয়? আমরা দেখতে যাচ্ছি যে এটার কারন হল এদের *উচ্চতর প্রাধান্য*।
 
 ## Operator precedence
 
