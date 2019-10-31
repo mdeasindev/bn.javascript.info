@@ -123,17 +123,17 @@ alert( +apples + +oranges ); // 5
 
 কেন বাইনারির আগে ইউনারি প্লাসগুলো মানে চালিত হয়? আমরা দেখতে যাচ্ছি যে এটার কারন হল এদের *উচ্চতর প্রাধান্য*।
 
-## Operator precedence
+##  অপারেটর প্রাধান্য
 
-If an expression has more than one operator, the execution order is defined by their *precedence*, or, in other words, the default priority order of operators.
+যদি একটি এক্সপ্রেসনের একের অধিক অপারেটর থাকে, এক্সেকিউশন ক্রম তাদের *প্রাধান্য* দ্বারা চালিত হবে, অথবা, অন্য কথায়, অপারেটরের ডিফল্ট ক্রমে অগ্রাধিকার পাবে।
 
-From school, we all know that the multiplication in the expression `1 + 2 * 2` should be calculated before the addition. That's exactly the precedence thing. The multiplication is said to have *a higher precedence* than the addition.
+স্কুল থেকেই, আমরা সবাই জানি যে `1 + 2 * 2` এই এক্সপ্রেসটি যোগ করার আগে গুন করা উচিত।  ঠিক এটাই প্রাধান্যতার বিষয়। গুন যোগের চেয়ে *উচ্চতর প্রাধান্য* থাকে।
 
-Parentheses override any precedence, so if we're not satisfied with the default order, we can use them to change it. For example, write `(1 + 2) * 2`.
+প্রথম বন্ধনী প্রাধান্যতা বাতিল করে, সুতরাং আমরা ডিফল্ট ক্রমে সন্তুষ্ট নই, আমারা এদেরকে ব্যবহার করতে পারি ক্রম পরিবর্তন করতে। যেমন, লিখেন `(1 + 2) * 2`।
 
-There are many operators in JavaScript. Every operator has a corresponding precedence number. The one with the larger number executes first. If the precedence is the same, the execution order is from left to right.
+জাভাস্ক্রিপ্টে অনেক অপারেটর রয়েছে। প্রত্যেক অপারেটরের রয়েছে অনুরূপ প্রাধান্য সংখ্যা। বড় সংখ্যাটি আগে কার্যকর হয়। যদি প্রাধান্য একই থাকে তাহলে নির্বাহ ক্রম হবে বাম থেকে ডানে।
 
-Here's an extract from the [precedence table](https://developer.mozilla.org/en/JavaScript/Reference/operators/operator_precedence) (you don't need to remember this, but note that unary operators are higher than corresponding binary ones):
+[অগ্রাধিকার সারণী] থেকে এখানে একটি নির্যাস (https://developer.mozilla.org/en/JavaScript/Reference/operators/operator_precedence) (আপনার এইগুলো মনে রাখার কোন প্রয়োজন নেই, তবে মনে রাখবেন যে ইউনারি অপারেটর হয় বাইনারি থেকে বড়):
 
 | Precedence | Name | Sign |
 |------------|------|------|
@@ -148,7 +148,7 @@ Here's an extract from the [precedence table](https://developer.mozilla.org/en/J
 | 3 | assignment | `=` |
 | ... | ... | ... |
 
-As we can see, the "unary plus" has a priority of `16` which is higher than the `13` of "addition" (binary plus). That's why, in the expression `"+apples + +oranges"`, unary pluses work before the addition.
+আমরা দেখেছি, "উইনারি প্লাস" রয়েছে অগ্রাধিকার `16` তে যেটা "যোগ" (বাইনারি প্লাস) থেকে উচ্চতর। এইজন্য,`"+apples + +oranges" এক্সপ্রেসনে` , ইউনারি প্লাস যোগের আগে কাজ করে।
 
 ## Assignment
 
